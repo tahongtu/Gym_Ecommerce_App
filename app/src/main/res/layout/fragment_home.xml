@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentHome">
+
+    <androidx.appcompat.widget.Toolbar
+        app:title="Home"
+        android:background="#FF6D63"
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <FrameLayout
+            android:id="@+id/framegiohang"
+            android:layout_marginStart="270dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="60dp"
+            android:layout_height="?attr/actionBarSize">
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/menuSL"
+                android:layout_gravity="top|right"
+                android:textColor="@color/purple_500"/>
+
+            <ImageView
+                android:id="@+id/carts"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_cart_24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    
+<ScrollView
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragmentBanner"
+            android:name="com.example.gymtest.Fragments.Fragment_Banner"/>
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragmentToday"
+            android:name="com.example.gymtest.Fragments.Fragment_Today"/>
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragmentArms"
+            android:name="com.example.gymtest.Fragments.Fragment_Arms"/>
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragmentChest"
+            android:name="com.example.gymtest.Fragments.Fragment_Chest"/>
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragmentBack"
+            android:name="com.example.gymtest.Fragments.Fragment_Back"/>
+
+    </LinearLayout>
+</ScrollView>
+    
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

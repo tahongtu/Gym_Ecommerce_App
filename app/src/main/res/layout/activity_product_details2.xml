@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ProductDetails"
+    android:id="@+id/productDetail">
+    <androidx.appcompat.widget.Toolbar
+        app:title="Product Details"
+        android:background="#FF6D63"
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+        <FrameLayout
+            android:id="@+id/framegiohang"
+            android:layout_marginStart="220dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="60dp"
+            android:layout_height="?attr/actionBarSize">
+            
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/menuSL"
+                android:layout_gravity="top|right"
+                android:textColor="@color/purple_500"/>
+
+            <ImageView
+                android:id="@+id/carts"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_cart_24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="5dp"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:id="@+id/imgProduct"
+                android:src="@drawable/wp"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/txtNameProduct"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:text="Whey Protein"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txtPriceProduct"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="150 $"
+                android:textColor="#FF0000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageButton
+                    android:src="@drawable/ic_subtraction"
+                    android:id="@+id/btngiam"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    />
+                <TextView
+                    android:background="@drawable/textview_custom"
+                    android:id="@+id/txtSL"
+                    android:gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="15sp"/>
+                <ImageButton
+                    android:src="@drawable/add"
+                    android:id="@+id/btntang"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+
+                    android:gravity="center"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+<!--            <Spinner-->
+
+<!--                android:id="@+id/spinner"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:id="@+id/btnAddCart"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:backgroundTint="#BA1919"
+                    android:text="Add To Cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Detailed Description Of Product"
+            android:textColor="#3F51B5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtDetails"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:text="Details"
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
